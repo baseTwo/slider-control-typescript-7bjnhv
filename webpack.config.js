@@ -2,15 +2,21 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  mode: "development",
   entry: "./src/index.ts",
-  devtool: "inline-source-map", // https://webpack.js.org/guides/typescript/#:~:text=Now%20we%20need%20to%20tell%20webpack%20to%20extract%20these%20source%20maps%20and%20include%20in%20our%20final%20bundle%3A
+  devtool: "source-map", // https://webpack.js.org/guides/typescript/#:~:text=Now%20we%20need%20to%20tell%20webpack%20to%20extract%20these%20source%20maps%20and%20include%20in%20our%20final%20bundle%3A
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
+        include: path.resolve(__dirname, "src"),
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, "src"),
       },
     ],
   },
@@ -18,10 +24,19 @@ module.exports = {
     new webpack.ProvidePlugin({
       _: "lodash", // https://webpack.js.org/guides/shimming/#:~:text=.%20Let%27s%20go%20ahead%20by%20removing%20the%20import%20statement%20for%20lodash%20and%20instead%20provide%20it%20via%20the%20plugin
     }),
+    // new webpack.LoaderOptionsPlugin({
+    //   // test: /\.js$/, // may apply this only for some modules
+    //   options: {
+    //     optimizations: {
+    //       namedModules: false, // https://webpack.js.org/guides/tree-shaking/#:~:text=optimization%3A%20%7B%0A%2B%20%20%20usedExports%3A%20true%2C%0A%2B%20%7D%2C
+    //     },
+    //   },
+    // }),
   ],
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", "*.css"],
   },
+  mode: "development",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),

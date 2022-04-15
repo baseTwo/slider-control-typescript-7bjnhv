@@ -1,12 +1,9 @@
+import { appName } from './node-builder'
+import './style.css';
+
 window.onload = () => {
     const dateString = new Date(Date.now()).toLocaleString();
     const appDiv: HTMLElement = document.getElementById('app');
-    appDiv.innerHTML = `<h2>Reloaded at ${dateString}</h2>`;
-
-    appDiv.append(_.join(['Hi', 'today', 'Paul'], ', '));
-
-    /*const sliders: HTMLCollectionOf<Element> = document.getElementsByTagName('slider');
-    console.log(sliders);*/
-    /*for (const slider of sliders)
-        console.log(slider);*/
+    appDiv.innerHTML = `<h2>${appName()} reloaded at ${dateString}</h2>`;
+    appDiv.children[0].classList.add('red');
 }

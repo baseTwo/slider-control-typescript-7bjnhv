@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    "baseUrl": "./src/",
+    "baseUrl": "",
     "module": "es6", // Don't use commonjs - https://webpack.js.org/guides/typescript/#:~:text=avoid%20setting%20module%20to%20%22CommonJS
     "target": "esnext",
     "jsx": "react",

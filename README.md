@@ -1,6 +1,6 @@
 # typescript-7bjnhv
 
-# Welcome
+## Welcome
 My attempt to write a composite slider control in TypeScript. It is composite in the sense that is contains an adjustable range and a thumb control.
 
 ```
@@ -20,7 +20,7 @@ My attempt to write a composite slider control in TypeScript. It is composite in
       :--v--->:‾‾
 ```
 
-# Dev Tools Used
+## Dev Tools Used
 - Created repo only with the TypeScript template on [StackBlitz ⚡️](https://stackblitz.com/edit/typescript-7bjnhv)
 - Synchronized to GitHub repo `baseTwo/slider-control-typescript-7bjnhv`
 - [GitHub CLI](https://cli.github.com/), a command line tool for GitHub
@@ -47,7 +47,7 @@ My attempt to write a composite slider control in TypeScript. It is composite in
   - [lodash](https://www.npmjs.com/package/lodash)
   - [foreach](https://www.npmjs.com/package/foreach)
 
-# Folder Structure
+## Folder Structure
 ```
  📄 README.md                              This file
  📄 .gitignore                             Files to ignore in git
@@ -61,9 +61,10 @@ My attempt to write a composite slider control in TypeScript. It is composite in
     📄 compiled files (.js)
 ```
 
-# npm Scripts
+## npm Scripts
 These scripts are maintained in `package.json` under the `scripts` tag.
+Before you can run any of these scripts, you have to install any npm dependencies with `npm install`.
 To run any of these scripts, e.g. `start` run `npm run start` from the command line.
-## start
+### start
 1. Cleans the `./dist` folder
 2. Runs webpack in watch mode. This automatically builds all code on every save.
