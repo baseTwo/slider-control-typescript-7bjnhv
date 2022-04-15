@@ -1,5 +1,12 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
-    "target": "esnext"
+    "target": "esnext",
+    "module": "commonjs",
+    "baseUrl": "src",
+    "outDir": "./dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
   }
 }

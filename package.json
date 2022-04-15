@@ -1,6 +1,5 @@
 {
   "name": "slider",
   "version": "0.0.0",
-  "private": true,
-  "dependencies": {}
+  "private": true
 }
