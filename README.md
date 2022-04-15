@@ -35,13 +35,17 @@ My attempt to write a composite slider control in TypeScript. It is composite in
   - [typescript](https://www.typescripttutorial.net/typescript-tutorial/setup-typescript/)
 
   Dev Packages:
+  - @types/lodash
+  - [concurrently](https://www.npmjs.com/package/concurrently)
+  - [rimraf](https://www.npmjs.com/package/rimraf)
+  - ts-loader
+  - [typescript](https://www.typescripttutorial.net/typescript-tutorial/setup-typescript/)
   - [webpack](https://www.npmjs.com/package/webpack)
   - [webpack-cli](https://www.npmjs.com/package/webpack-cli)
-  - [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)
-  - [rimraf](https://www.npmjs.com/package/rimraf)
 
   Runtime Packages:
   - [lodash](https://www.npmjs.com/package/lodash)
+  - [foreach](https://www.npmjs.com/package/foreach)
 
 # Folder Structure
 ```
@@ -50,6 +54,7 @@ My attempt to write a composite slider control in TypeScript. It is composite in
  📄 tsconfig.json                          TypeScript Compiler Configuration
  📄 package.json                           NPM Package Dependency Configuration
  📄 launch.json                            VSCode Launch Settings
+ 📄 webpack.config.js                      Webpack Configuration
  📁 src
   │ 📄 source files (.ts, .css, .html)
  📁 dist

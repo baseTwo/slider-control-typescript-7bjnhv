@@ -1,13 +1,19 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
+    "outDir": "./dist/",
+    "baseUrl": "./src/",
+    "module": "es6", // Don't use commonjs - https://webpack.js.org/guides/typescript/#:~:text=avoid%20setting%20module%20to%20%22CommonJS
     "target": "esnext",
-    "module": "commonjs",
-    "baseUrl": "src",
-    "outDir": "stage/tsc",
+    "jsx": "react",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": false,
-    "esModuleInterop": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true, // https://webpack.js.org/guides/typescript/#:~:text=%22allowSyntheticDefaultImports%22%20%3A%20true
+    "esModuleInterop": true, // https://webpack.js.org/guides/typescript/#:~:text=%22esModuleInterop%22%20%3A%20true
+    "noImplicitAny": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
   }
 }
