@@ -60,3 +60,10 @@ My attempt to write a composite slider control in TypeScript. It is composite in
  📁 dist
     📄 compiled files (.js)
 ```
+
+# npm Scripts
+These scripts are maintained in `package.json` under the `scripts` tag.
+To run any of these scripts, e.g. `start` run `npm run start` from the command line.
+## start
+1. Cleans the `./dist` folder
+2. Runs webpack in watch mode. This automatically builds all code on every save.

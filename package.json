@@ -4,15 +4,16 @@
   "author": "Paul den Boer",
   "private": true,
   "scripts": {
-    "build": "npm run clean:stage && npm run tsc && npm run webpack",
-    "watch": "concurrently -k \"tsc --pretty --watch\" \"webpack --progress --watch\"",
-    "tsc": "tsc --pretty",
-    "webpack": "webpack --progress",
-    "webpack:prod": "webpack ./stage/tsc/index.js -o ./dist --progress --mode=production",
-    "webpack:dev": "webpack ./stage/tsc/index.js -o ./dist --progress --mode=development",
-    "serve": "webpack serve",
+    "start": "npm run rimraf -- dist && npx webpack --watch",
     "rimraf": "rimraf",
-    "clean:stage": "npm run rimraf -- stage"
+    "=build": "npm run clean:stage && npm run tsc && npm run webpack",
+    "=watch": "concurrently -k \"tsc --pretty --watch\" \"webpack --progress --watch\"",
+    "=tsc": "tsc --pretty",
+    "=webpack": "webpack --progress",
+    "=webpack:prod": "webpack ./stage/tsc/index.js -o ./dist --progress --mode=production",
+    "=webpack:dev": "webpack ./stage/tsc/index.js -o ./dist --progress --mode=development",
+    "=serve": "webpack serve",
+    "=clean:stage": "npm run rimraf -- stage"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.181",

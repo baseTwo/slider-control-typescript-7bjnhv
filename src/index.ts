@@ -3,7 +3,7 @@ window.onload = () => {
     const appDiv: HTMLElement = document.getElementById('app');
     appDiv.innerHTML = `<h2>Reloaded at ${dateString}</h2>`;
 
-    appDiv.append(_.join(['Hi', 'Paul'], ', '));
+    appDiv.append(_.join(['Hi', 'today', 'Paul'], ', '));
 
     /*const sliders: HTMLCollectionOf<Element> = document.getElementsByTagName('slider');
     console.log(sliders);*/
