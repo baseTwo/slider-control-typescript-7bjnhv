@@ -5,16 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "name": "Launch Dev Server",
+            "command": "npm run start",
             "request": "launch",
-            "name": "Launch Webpack",
-            "program": "${workspaceFolder}/src/node_modules/webpack/bin/webpack.js"
+            "type": "node-terminal",
         },
         {
+            "name": "Launch Edge",
             "type": "pwa-msedge",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "${workspaceFolder}/src/index.html"
+            "url": "http://localhost:8080/index.html",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true,
         }
-    ]
+    ],
 }

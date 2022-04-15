@@ -4,10 +4,11 @@
   "author": "Paul den Boer",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --progress --color --mode development --config webpack.config.js",
+    "start": "npx webpack serve --progress --color --mode development --config webpack.config.js",
     "build": "webpack --color --mode production --config webpack.config.production.js",
     "prebuild": "rimraf ./dist",
     "lint": "eslint ./",
+    "rimraf": "rimraf",
     "=start": "npm run rimraf -- dist && npx webpack --watch",
     "=build": "npm run clean:stage && npm run tsc && npm run webpack",
     "=watch": "concurrently -k \"tsc --pretty --watch\" \"webpack --progress --watch\"",

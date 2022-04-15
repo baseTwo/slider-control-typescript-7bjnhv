@@ -53,14 +53,6 @@ module.exports = {
       inject: true,
       template: "src/index.html",
     }),
-    // new webpack.LoaderOptionsPlugin({
-    //   // test: /\.js$/, // may apply this only for some modules
-    //   options: {
-    //     optimizations: {
-    //       namedModules: false, // https://webpack.js.org/guides/tree-shaking/#:~:text=optimization%3A%20%7B%0A%2B%20%20%20usedExports%3A%20true%2C%0A%2B%20%7D%2C
-    //     },
-    //   },
-    // }),
   ],
   optimization: {
     usedExports: true,
