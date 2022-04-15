@@ -8,12 +8,26 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "allowJs": true,
+    "moduleResolution": "node",
+    "allowJs": false,
+    "checkJs": false,
+    "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true, // https://webpack.js.org/guides/typescript/#:~:text=%22allowSyntheticDefaultImports%22%20%3A%20true
     "esModuleInterop": true, // https://webpack.js.org/guides/typescript/#:~:text=%22esModuleInterop%22%20%3A%20true
     "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
     "typeRoots": [
       "node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017",
+      "esnext"
     ],
   }
 }

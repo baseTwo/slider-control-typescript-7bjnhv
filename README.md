@@ -66,5 +66,4 @@ These scripts are maintained in `package.json` under the `scripts` tag.
 Before you can run any of these scripts, you have to install any npm dependencies with `npm install`.
 To run any of these scripts, e.g. `start` run `npm run start` from the command line.
 ### start
-1. Cleans the `./dist` folder
-2. Runs webpack in watch mode. This automatically builds all code on every save.
+Builds the files into memory and start the dev server, then watch for changes.

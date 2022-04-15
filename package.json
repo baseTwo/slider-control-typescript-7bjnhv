@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "author": "Paul den Boer",
   "private": true,
-  "sideEffects": false,
   "scripts": {
-    "start": "npm run rimraf -- dist && npx webpack --watch",
-    "rimraf": "rimraf",
+    "start": "webpack-dev-server --progress --color --mode development --config webpack.config.js",
+    "build": "webpack --color --mode production --config webpack.config.production.js",
+    "prebuild": "rimraf ./dist",
+    "lint": "eslint ./",
+    "=start": "npm run rimraf -- dist && npx webpack --watch",
     "=build": "npm run clean:stage && npm run tsc && npm run webpack",
     "=watch": "concurrently -k \"tsc --pretty --watch\" \"webpack --progress --watch\"",
     "=tsc": "tsc --pretty",
@@ -19,14 +21,23 @@
   "devDependencies": {
     "@types/lodash": "^4.14.181",
     "css-loader": "^6.7.1",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "fork-ts-checker-notifier-webpack-plugin": "^6.0.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.6",
+    "html-webpack-plugin": "^5.5.0",
     "rimraf": "^3.0.2",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.8",
     "typescript": "^4.6.3",
     "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "core-js": "^3.22.0",
+    "lodash": "^4.17.21",
+    "whatwg-fetch": "^3.6.2"
   }
 }
