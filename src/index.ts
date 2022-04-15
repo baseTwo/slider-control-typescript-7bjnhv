@@ -1,6 +1,11 @@
 // Import stylesheets
-import './style.css';
+// import 'style.css';
+
+console.log('Starting ', new Date(Date.now()).toISOString());
 
 // Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+window.onload = () => {
+    console.log('Window OnLoad');
+    const appDiv: HTMLElement = document.getElementById('app');
+    appDiv.innerHTML = `<h2>The script worked</h2>`;
+}

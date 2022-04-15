@@ -1,6 +1,13 @@
-# Folders
-dist/*
-node_modules/*
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Files
+# Artefacts
+/dist/*
+/stage/*
+
+# npm
 package-lock.json
+/node_modules/*
+
+# VSCode
+.vscode/*
+!.vscode/launch.json

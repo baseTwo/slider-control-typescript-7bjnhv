@@ -27,20 +27,29 @@ My attempt to write a composite slider control in TypeScript. It is composite in
 - [VSCode](https://code.visualstudio.com/), a free Integrated Developer Environment (IDE)
   VSCode Extensions:
   - [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
+  - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 - [NVM for Windows](https://github.com/coreybutler/nvm-windows), a strongly recommended installer to manage multiple versions of Node.js
 - [npm](https://www.npmjs.com/), a Node package manager. (Should be installed automatically with NVM - unsure)
-  npm Packages:
-  - typescript (global)
-    ```
-    npm install -g typescript
-    ```
+
+  Global Packages:
+  - [typescript](https://www.typescripttutorial.net/typescript-tutorial/setup-typescript/)
+
+  Dev Packages:
+  - [webpack](https://www.npmjs.com/package/webpack)
+  - [webpack-cli](https://www.npmjs.com/package/webpack-cli)
+  - [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)
+  - [rimraf](https://www.npmjs.com/package/rimraf)
+
+  Runtime Packages:
+  - [lodash](https://www.npmjs.com/package/lodash)
 
 # Folder Structure
 ```
- 📄 README.md
- 📄 .gitignore
- 📄 tsconfig.json
- 📄 package.json
+ 📄 README.md                              This file
+ 📄 .gitignore                             Files to ignore in git
+ 📄 tsconfig.json                          TypeScript Compiler Configuration
+ 📄 package.json                           NPM Package Dependency Configuration
+ 📄 launch.json                            VSCode Launch Settings
  📁 src
   │ 📄 source files (.ts, .css, .html)
  📁 dist
