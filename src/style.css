@@ -6,3 +6,41 @@ h2 {
 .red {
   color: red;
 }
+
+.slider-container {
+  padding: 8px;
+  background-color: aliceblue;
+}
+
+.slider-container,
+.slider-container > * {
+  touch-action: none;
+}
+.slider-client {
+  position: relative;
+  height: 8px;
+}
+.slider-client > * {
+  position: absolute;
+  box-sizing: border-box;
+}
+.slider-rail {
+  width: 100%;
+  height: 8px;
+  border: 1px inset silver;
+  border-radius: 4px;
+}
+.slider-range {
+  background: blue;
+  height: 8px;
+  border-radius: 4px;
+}
+.slider-thumb {
+  background: #fff;
+  border: 1px blue solid;
+  border-radius: 8px;
+  transform: translate(-50%, -25%);
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}

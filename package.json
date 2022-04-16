@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "npx webpack serve --progress --color --mode development --config webpack.config.js",
-    "build": "webpack --color --mode production --config webpack.config.production.js",
+    "build": "prebuild && webpack --color --mode production --config webpack.config.production.js",
     "prebuild": "rimraf ./dist",
     "lint": "eslint ./",
     "rimraf": "rimraf",

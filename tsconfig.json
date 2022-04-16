@@ -14,7 +14,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true, // https://webpack.js.org/guides/typescript/#:~:text=%22allowSyntheticDefaultImports%22%20%3A%20true
     "esModuleInterop": true, // https://webpack.js.org/guides/typescript/#:~:text=%22esModuleInterop%22%20%3A%20true
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
